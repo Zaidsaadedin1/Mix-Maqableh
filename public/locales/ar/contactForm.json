@@ -1,36 +1,34 @@
 {
-  "contactForm": {
-    "contact_form_title": "تواصل مع مكس مقابلة",
-    "form_name_label": "اسمك",
-    "form_name_placeholder": "ادخل اسمك",
-    "form_email_label": "البريد الإلكتروني",
-    "form_email_placeholder": "your@email.com",
-    "form_phone_label": "واتساب",
-    "form_phone_placeholder": "+962 7X XXX XXXX",
-    "form_service_label": "نوع الاستفسار",
-    "form_service_placeholder": "اختر الهدف",
-    "form_message_label": "رسالتك",
-    "form_message_placeholder": "مرحباً مكس، أود مناقشة...",
-    "form_submit": "إرسال لمكس",
-    "service_types": {
-      "collaboration": "تعاون مع علامة تجارية",
-      "interview": "مقابلة إعلامية",
-      "appearance": "حضور فعالية",
-      "management": "استفسار إداري",
-      "other": "أخرى"
-    },
-    "notifications": {
-      "success_title": "تم الإرسال!",
-      "success_message": "سيتم الرد من فريق مكس خلال ٤٨ ساعة",
-      "error_title": "فشل الإرسال",
-      "error_message": "حاول مرة أخرى أو راسل @mixmaqableh مباشرة"
-    },
-    "validation": {
-      "name_required": "الرجاء إدخال الاسم",
-      "email_invalid": "بريد إلكتروني صحيح",
-      "phone_required": "مطلوب رقم واتساب",
-      "service_required": "اختر نوع الاستفسار",
-      "message_required": "لا تنسى كتابة الرسالة!"
-    }
+  "contact_form_title": "تواصل مع مكس مقابلة",
+  "form_name_label": "اسمك",
+  "form_name_placeholder": "ادخل اسمك",
+  "form_email_label": "البريد الإلكتروني",
+  "form_email_placeholder": "your@email.com",
+  "form_phone_label": "واتساب",
+  "form_phone_placeholder": "+962 7X XXX XXXX",
+  "form_service_label": "نوع الاستفسار",
+  "form_service_placeholder": "اختر الهدف",
+  "form_message_label": "رسالتك",
+  "form_message_placeholder": "مرحباً مكس، أود مناقشة...",
+  "form_submit": "إرسال لمكس",
+  "service_types": {
+    "collaboration": "تعاون مع علامة تجارية",
+    "interview": "مقابلة إعلامية",
+    "appearance": "حضور فعالية",
+    "management": "استفسار إداري",
+    "other": "أخرى"
+  },
+  "notifications": {
+    "success_title": "تم الإرسال!",
+    "success_message": "سيتم الرد من فريق مكس خلال ٤٨ ساعة",
+    "error_title": "فشل الإرسال",
+    "error_message": "حاول مرة أخرى أو راسل @mixmaqableh مباشرة"
+  },
+  "validation": {
+    "name_required": "الرجاء إدخال الاسم",
+    "email_invalid": "بريد إلكتروني صحيح",
+    "phone_required": "مطلوب رقم واتساب",
+    "service_required": "اختر نوع الاستفسار",
+    "message_required": "لا تنسى كتابة الرسالة!"
   }
 }

@@ -88,7 +88,7 @@ function SendMessageToMix() {
     <Paper ml={100} mr={100} p="xl" radius="xl" shadow="lg" pos="relative">
       <LoadingOverlay visible={loading} zIndex={1000} />
       <Title order={3} mb="lg" ta="center">
-        {t("contactForm:contact_form_title")}
+        {t("contact_form_title")}
       </Title>
 
       <form onSubmit={form.onSubmit(handleSubmit)}>

@@ -29,6 +29,10 @@ function App({
     document.documentElement.dir = dir;
     document.documentElement.lang = router.locale ?? "en";
   }, [dir, router.locale]);
+  const isErrorPage =
+    router.pathname === "/404" ||
+    router.pathname === "/500" ||
+    router.pathname === "/400";
 
   return (
     <MantineProvider
@@ -54,7 +58,7 @@ function App({
           minWidth: "100vw",
         }}
       >
-        <Menu />
+        {!isErrorPage && <Menu />}
         <Component {...pageProps} />
       </Stack>
     </MantineProvider>
