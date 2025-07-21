@@ -52,8 +52,7 @@ const Home = () => {
   ];
 
   return (
-    <Container size="lg" py="xl" dir={isRTL ? "rtl" : "ltr"}>
-      {/* Hero Section */}
+    <Container mt={"2rem"} size="lg" py="xl" dir={isRTL ? "rtl" : "ltr"}>
       <Group
         align="center"
         justify="space-between"

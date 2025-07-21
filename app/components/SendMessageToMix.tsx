@@ -85,7 +85,7 @@ function SendMessageToMix() {
   >;
 
   return (
-    <Paper ml={100} mr={100} p="xl" radius="xl" shadow="lg" pos="relative">
+    <Paper p="xl" radius="xl" shadow="lg" pos="relative">
       <LoadingOverlay visible={loading} zIndex={1000} />
       <Title order={3} mb="lg" ta="center">
         {t("contact_form_title")}

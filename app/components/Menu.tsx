@@ -119,7 +119,7 @@ const MenuComponent = () => {
     <Box
       component="nav"
       style={{
-        position: router.pathname === "/" ? "fixed" : "static",
+        position: "static",
         top: 0,
         left: 0,
         right: 0,

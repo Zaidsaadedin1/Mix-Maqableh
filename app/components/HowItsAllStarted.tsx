@@ -59,7 +59,7 @@ function HowItsAllStarted() {
       {/* Hero Section */}
       <Stack gap="xl" mb={rem(60)} align="center">
         <Avatar
-          src="/images/influencer/1.jpg"
+          src="/images/influencer/5.jpg"
           size={150}
           radius="50%"
           mb="md"
