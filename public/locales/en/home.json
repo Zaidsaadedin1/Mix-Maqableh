@@ -1,60 +1,22 @@
 {
-  "slide1": {
-    "headline": "Who is Mix Maqableh?",
-    "paragraph": "Mohammad Nour, known as Mix Maqableh, is a distinguished Jordanian content creator.",
-    "description": "He blends creativity and honesty to reach a wide audience in the Arab world."
+  "hero": {
+    "title": "Mix Maqableh",
+    "subtitle": "Jordanian content creator with 2.7M+ Instagram followers",
+    "instagram_button": "Follow on Instagram",
+    "youtube_button": "YouTube Channel",
+    "tiktok_handle": "@mixmaqableh"
   },
-  "slide2": {
-    "headline": "Content Journey",
-    "paragraph": "Started from simple videos and transformed into an influential brand.",
-    "description": "He shares real stories and bold ideas that reflect his passion for life and people."
+  "content": {
+    "title": "Latest Content",
+    "view_all": "View All Content"
   },
-  "slide3": {
-    "headline": "Behind the Camera",
-    "paragraph": "A small team with big ideas.",
-    "description": "Every video and topic undergoes professional planning and production reflecting Mix Maqableh’s identity."
-  },
-  "slide4": {
-    "headline": "Genuine Partnerships",
-    "paragraph": "Collaborates with brands he believes in.",
-    "description": "Delivers honest and suitable advertising content to his audience, building long-term trust."
-  },
-  "slide5": {
-    "headline": "Loyal Audience",
-    "paragraph": "More than just followers.",
-    "description": "Builds a community of people who find inspiration and benefit in every post."
-  },
-  "slide6": {
-    "headline": "Distinctive Style",
-    "paragraph": "A mix of realism, humor, and authenticity.",
-    "description": "Attracts audiences of all ages and backgrounds."
-  },
-  "slide7": {
-    "headline": "Future of Mix Maqableh",
-    "paragraph": "New plans and deeper content.",
-    "description": "Join the upcoming journey and be part of a story written every day."
-  },
-  "made_by": "Made with love by CodeMasters Jo",
-  "followers": {
-    "title": "Over 22 MiLLIONS Million Fans Worldwide",
-    "instagram": "Instagram Followers",
-    "youtube": "YouTube Subscribers",
-    "tiktok": "TikTok Followers",
-    "twitter": "X Followers"
-  },
-  "words": {
-    "title": "Most Used Words",
-    "subtitle": "The words I use the most are...",
-    "amazing": "So cool",
-    "love": "Love you all",
-    "follow": "Follow me",
-    "check": "Check this",
-    "out": "Hey there",
-    "used": "Used",
-    "times": "times",
-    "round": "Let’s Go Round"
-  },
-  "social": {
-    "title": "Follow Me"
+  "about": {
+    "title": "About Mix",
+    "description": "Jordanian social media personality and content creator known for his engaging lifestyle content, travel vlogs, and charismatic personality.",
+    "stats": {
+      "instagram": "Instagram Followers",
+      "tiktok": "TikTok Followers",
+      "collaborations": "Brand Collaborations"
+    }
   }
 }

@@ -1,16 +1,18 @@
+// pages/index.tsx
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
-import Analytics from "@/app/components/analytics";
+import WhosMix from "@/app/components/WhosMix";
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "en", [
-        "analytics",
+        "whosMix",
+        "menuComponent",
         "common",
       ])),
     },
   };
 };
 
-export default Analytics;
+export default WhosMix;
