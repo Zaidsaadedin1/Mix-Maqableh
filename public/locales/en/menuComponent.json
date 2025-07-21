@@ -1,8 +1,8 @@
 {
-  "menu": "القائمة",
-  "whos_mix": "من هو ميكس",
-  "how_its_all_started": "كيف بدأ كل شيء",
-  "send_message_to_mix": "إرسال رسالة إلى ميكس",
-  "account": "الحساب",
-  "logout": "تسجيل الخروج"
+  "menu": "Menu",
+  "whos_mix": "Who's Mix",
+  "how_its_all_started": "How It's All Started",
+  "send_message_to_mix": "Send Message to Mix",
+  "account": "Account",
+  "logout": "Logout"
 }

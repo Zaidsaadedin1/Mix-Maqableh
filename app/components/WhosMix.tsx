@@ -55,7 +55,7 @@ const TextType: React.FC<TextTypeProps> = ({ text, speed = 50, style }) => {
 };
 
 function WhosMix() {
-  const { t } = useTranslation(["common", "whosMix"]);
+  const { t } = useTranslation(["whosMix", "common"]);
   const isMobile = useMediaQuery("(max-width: 768px)");
   const theme = useMantineTheme();
   const { scrollYProgress } = useViewportScroll();

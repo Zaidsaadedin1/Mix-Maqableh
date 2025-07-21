@@ -9,12 +9,16 @@ import {
   Stack,
   useMantineTheme,
   rem,
+  Card,
+  Badge,
+  SimpleGrid,
+  Avatar,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import {
   IconBrandInstagram,
-  IconBrandYoutube,
   IconBrandTiktok,
+  IconBrandSnapchat,
 } from "@tabler/icons-react";
 import { useTranslation } from "next-i18next";
 
@@ -24,11 +28,24 @@ const Home = () => {
   const { t, i18n } = useTranslation("home");
   const isRTL = i18n.language === "ar";
 
-  // Stats data (could also be moved to translations if dynamic)
+  // Updated stats with 22M+ followers
   const stats = [
-    { value: "2.7M+", label: t("about.stats.instagram") },
-    { value: "500K+", label: t("about.stats.tiktok") },
-    { value: "100+", label: t("about.stats.collaborations") },
+    {
+      value: "12.5M+",
+      label: t("about.stats.tiktok"),
+      icon: <IconBrandTiktok size={24} />,
+    },
+    {
+      value: "7.3M+",
+      label: t("about.stats.instagram"),
+      icon: <IconBrandInstagram size={24} />,
+    },
+    {
+      value: "2.2M+",
+      label: t("about.stats.snapchat"),
+      icon: <IconBrandSnapchat size={24} />,
+    },
+    { value: "22M+", label: t("about.stats.total"), icon: null },
   ];
 
   return (
@@ -48,28 +65,69 @@ const Home = () => {
           <Text size={isMobile ? "md" : "xl"} c="dimmed">
             {t("hero.subtitle")}
           </Text>
-          <Group mt="md">
+          <Group mt="md" wrap="nowrap">
             <Button
               size={isMobile ? "md" : "lg"}
               leftSection={<IconBrandInstagram size={20} />}
               color="pink"
+              fullWidth={isMobile}
             >
               {t("hero.instagram_button")}
             </Button>
             <Button
               size={isMobile ? "md" : "lg"}
-              variant="outline"
-              leftSection={<IconBrandYoutube size={20} />}
+              leftSection={<IconBrandTiktok size={20} />}
+              color="black"
+              fullWidth={isMobile}
             >
-              {t("hero.youtube_button")}
+              {t("hero.tiktok_button")}
             </Button>
+            <Button
+              size={isMobile ? "md" : "lg"}
+              leftSection={<IconBrandSnapchat size={20} />}
+              color="yellow"
+              variant="outline"
+              fullWidth={isMobile}
+            >
+              {t("hero.snapchat_button")}
+            </Button>
+          </Group>
+
+          {/* Social Badges */}
+          <Group gap="sm" mt="xl">
+            {Object.entries(
+              t("hero.social_handles", { returnObjects: true })
+            ).map(([platform, handle]) => (
+              <Badge
+                key={platform}
+                leftSection={
+                  platform === "instagram" ? (
+                    <IconBrandInstagram size={16} />
+                  ) : platform === "tiktok" ? (
+                    <IconBrandTiktok size={16} />
+                  ) : (
+                    <IconBrandSnapchat size={16} />
+                  )
+                }
+                variant="light"
+                color={
+                  platform === "instagram"
+                    ? "pink"
+                    : platform === "tiktok"
+                    ? "dark"
+                    : "yellow"
+                }
+              >
+                {handle}
+              </Badge>
+            ))}
           </Group>
         </Stack>
 
         {!isMobile && (
           <div style={{ flex: 1, position: "relative" }}>
             <Image
-              src="/mix-profile.jpg"
+              src="/images/influencer/1.jpg"
               alt={t("hero.title")}
               radius="md"
               style={{
@@ -90,7 +148,7 @@ const Home = () => {
             >
               <Group gap="xs">
                 <IconBrandTiktok color={theme.colors.blue[6]} />
-                <Text fw={500}>{t("hero.tiktok_handle")}</Text>
+                <Text fw={500}>{t("hero.social_handles.tiktok")}</Text>
               </Group>
             </div>
           </div>
@@ -105,17 +163,34 @@ const Home = () => {
 
         <Group gap="md" justify="center">
           {[1, 2, 3].map((item) => (
-            <div
+            <Card
               key={item}
+              shadow="sm"
+              padding="lg"
+              radius="md"
               style={{
                 width: isMobile ? "100%" : rem(300),
                 aspectRatio: "9/16",
-                backgroundColor: theme.colors.gray[2],
-                borderRadius: theme.radius.md,
               }}
             >
-              {/* Content placeholder */}
-            </div>
+              <Card.Section>
+                <Image
+                  src={`/images/influencer/${item}.jpg`}
+                  height={300}
+                  alt={`Mix Maqableh content ${item}`}
+                />
+              </Card.Section>
+              <Group justify="space-between" mt="md">
+                <Text fw={500}>#{item} Viral Video</Text>
+                <Badge color="pink" variant="light">
+                  {item === 1
+                    ? "12M views"
+                    : item === 2
+                    ? "8M views"
+                    : "5M views"}
+                </Badge>
+              </Group>
+            </Card>
           ))}
         </Group>
 
@@ -128,16 +203,27 @@ const Home = () => {
       <Stack mt={rem(80)} gap="md">
         <Title order={2}>{t("about.title")}</Title>
         <Text size="lg">{t("about.description")}</Text>
-        <Group mt="md" gap="xl" justify={isMobile ? "center" : "flex-start"}>
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="xl" mt="xl">
           {stats.map((stat, index) => (
-            <Stack key={index} gap={0}>
-              <Text fw={700} size="xl">
-                {stat.value}
-              </Text>
-              <Text c="dimmed">{stat.label}</Text>
-            </Stack>
+            <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+              <Group>
+                {stat.icon && (
+                  <Avatar color={theme.primaryColor} radius="xl">
+                    {stat.icon}
+                  </Avatar>
+                )}
+                <Stack gap={0}>
+                  <Text fw={700} size="xl">
+                    {stat.value}
+                  </Text>
+                  <Text c="dimmed" size="sm">
+                    {stat.label}
+                  </Text>
+                </Stack>
+              </Group>
+            </Card>
           ))}
-        </Group>
+        </SimpleGrid>
       </Stack>
     </Container>
   );

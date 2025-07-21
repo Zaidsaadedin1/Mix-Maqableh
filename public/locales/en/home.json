@@ -1,22 +1,38 @@
 {
   "hero": {
     "title": "Mix Maqableh",
-    "subtitle": "Jordanian content creator with 2.7M+ Instagram followers",
+    "subtitle": "Jordanian social media superstar with 22M+ followers",
     "instagram_button": "Follow on Instagram",
-    "youtube_button": "YouTube Channel",
-    "tiktok_handle": "@mixmaqableh"
+    "tiktok_button": "Follow on TikTok",
+    "snapchat_button": "Add on Snapchat",
+    "social_handles": {
+      "instagram": "@mixmaqableh",
+      "tiktok": "@mixmaqableh",
+      "snapchat": "mixmaqableh20"
+    }
   },
   "content": {
-    "title": "Latest Content",
-    "view_all": "View All Content"
+    "title": "Viral Content",
+    "view_all": "View All Videos",
+    "videos": {
+      "1": "#1 Viral Video",
+      "2": "#2 Viral Video",
+      "3": "#3 Viral Video"
+    },
+    "views": {
+      "1": "12M views",
+      "2": "8M views",
+      "3": "5M views"
+    }
   },
   "about": {
     "title": "About Mix",
-    "description": "Jordanian social media personality and content creator known for his engaging lifestyle content, travel vlogs, and charismatic personality.",
+    "description": "One of Jordan's most influential digital creators, known for viral TikTok challenges, Instagram reels, and exclusive Snapchat content.",
     "stats": {
-      "instagram": "Instagram Followers",
       "tiktok": "TikTok Followers",
-      "collaborations": "Brand Collaborations"
+      "instagram": "Instagram Followers",
+      "snapchat": "Snapchat Subscribers",
+      "total": "Total Followers"
     }
   }
 }
