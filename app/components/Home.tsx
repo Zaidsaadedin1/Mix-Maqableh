@@ -200,7 +200,7 @@ const Home = () => {
         </Title>
 
         <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="md">
-          {[1, 2, 3].map((item) => (
+          {[3, 2, 4].map((item) => (
             <Card
               key={item}
               shadow="sm"
@@ -214,7 +214,7 @@ const Home = () => {
               <Card.Section>
                 <Image
                   src={`/images/influencer/${item}.jpg`}
-                  height={300}
+                  height={"100%"}
                   alt={`Mix Maqableh content ${item}`}
                 />
               </Card.Section>
