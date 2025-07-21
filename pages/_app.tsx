@@ -52,7 +52,6 @@ function App({
           direction: dir,
           minHeight: "100vh",
           minWidth: "100vw",
-          // background: "linear-gradient(135deg, #6fc8fcff 35%, #ffffff 50%)",
         }}
       >
         <Menu />

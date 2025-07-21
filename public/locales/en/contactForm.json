@@ -1,26 +1,36 @@
 {
-  "contact_form_title": "Contact Form",
-  "form_name_label": "Name",
-  "form_name_placeholder": "Enter your name",
-  "form_email_label": "Email",
-  "form_email_placeholder": "Enter your email",
-  "form_phone_label": "Phone",
-  "form_phone_placeholder": "Enter your phone number",
-  "form_service_label": "Service",
-  "form_service_placeholder": "Select a service",
-  "form_message_label": "Message",
-  "form_message_placeholder": "Tell us about your needs",
-  "form_submit": "Send Message",
-  "service_individual": "Individual Therapy",
-  "service_couples": "Couples Therapy",
-  "service_family": "Family Therapy",
-  "service_group": "Group Therapy",
-  "sendRequests": {
+  "contactForm": {
+    "contact_form_title": "Contact Mix Maqableh",
+    "form_name_label": "Your Name",
+    "form_name_placeholder": "Enter your name",
+    "form_email_label": "Email",
+    "form_email_placeholder": "your@email.com",
+    "form_phone_label": "Phone (WhatsApp)",
+    "form_phone_placeholder": "+962 7X XXX XXXX",
+    "form_service_label": "Inquiry Type",
+    "form_service_placeholder": "Select purpose",
+    "form_message_label": "Your Message",
+    "form_message_placeholder": "Hello Mix, I'd like to discuss...",
+    "form_submit": "Send to Mix",
+    "service_types": {
+      "collaboration": "Brand Collaboration",
+      "interview": "Media Interview",
+      "appearance": "Event Appearance",
+      "management": "Management Inquiry",
+      "other": "Other"
+    },
     "notifications": {
-      "success_title": "Success",
-      "success_message": "Message sent successfully!",
-      "error_title": "Error",
-      "error_message": "Failed to send message"
+      "success_title": "Message Sent!",
+      "success_message": "Mix's team will respond within 48 hours",
+      "error_title": "Delivery Failed",
+      "error_message": "Please try again or DM @mixmaqableh"
+    },
+    "validation": {
+      "name_required": "Please enter your name",
+      "email_invalid": "Enter a valid email",
+      "phone_required": "WhatsApp number required",
+      "service_required": "Select inquiry type",
+      "message_required": "Don't forget your message!"
     }
   }
 }

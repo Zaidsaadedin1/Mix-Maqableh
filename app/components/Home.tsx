@@ -13,6 +13,7 @@ import {
   Badge,
   SimpleGrid,
   Avatar,
+  Box,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import {
@@ -25,6 +26,7 @@ import { useTranslation } from "next-i18next";
 const Home = () => {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const isSmallScreen = useMediaQuery("(max-width: 576px)");
   const { t, i18n } = useTranslation("home");
   const isRTL = i18n.language === "ar";
 
@@ -55,17 +57,30 @@ const Home = () => {
         align="center"
         justify="space-between"
         gap="xl"
-        style={{ minHeight: `calc(100vh - ${rem(100)})` }}
-        wrap="nowrap"
+        style={{ minHeight: isMobile ? "auto" : `calc(100vh - ${rem(100)})` }}
+        wrap={isMobile ? "wrap" : "nowrap"}
       >
-        <Stack gap="md" style={{ flex: 1 }}>
-          <Title order={1} size={isMobile ? rem(42) : rem(64)}>
+        <Stack
+          gap="md"
+          style={{ flex: 1, minWidth: isSmallScreen ? "100%" : undefined }}
+        >
+          <Title
+            order={1}
+            size={isMobile ? (isSmallScreen ? rem(32) : rem(42)) : rem(64)}
+          >
             {t("hero.title")}
           </Title>
-          <Text size={isMobile ? "md" : "xl"} c="dimmed">
+          <Text
+            size={isMobile ? (isSmallScreen ? "sm" : "md") : "xl"}
+            c="dimmed"
+          >
             {t("hero.subtitle")}
           </Text>
-          <Group mt="md" wrap="nowrap">
+          <Group
+            mt="md"
+            wrap={isSmallScreen ? "wrap" : "nowrap"}
+            grow={isSmallScreen}
+          >
             <Button
               size={isMobile ? "md" : "lg"}
               leftSection={<IconBrandInstagram size={20} />}
@@ -94,7 +109,7 @@ const Home = () => {
           </Group>
 
           {/* Social Badges */}
-          <Group gap="sm" mt="xl">
+          <Group gap="sm" mt="xl" wrap="wrap">
             {Object.entries(
               t("hero.social_handles", { returnObjects: true })
             ).map(([platform, handle]) => (
@@ -125,7 +140,13 @@ const Home = () => {
         </Stack>
 
         {!isMobile && (
-          <div style={{ flex: 1, position: "relative" }}>
+          <Box
+            style={{
+              flex: 1,
+              position: "relative",
+              minWidth: isSmallScreen ? "100%" : undefined,
+            }}
+          >
             <Image
               src="/images/influencer/1.jpg"
               alt={t("hero.title")}
@@ -135,7 +156,7 @@ const Home = () => {
                 boxShadow: theme.shadows.xl,
               }}
             />
-            <div
+            <Box
               style={{
                 position: "absolute",
                 bottom: rem(-20),
@@ -148,20 +169,22 @@ const Home = () => {
             >
               <Group gap="xs">
                 <IconBrandTiktok color={theme.colors.blue[6]} />
-                <Text fw={500}>{t("hero.social_handles.tiktok")}</Text>
+                <Text color="white" fw={500}>
+                  {t("hero.social_handles.tiktok")}
+                </Text>
               </Group>
-            </div>
-          </div>
+            </Box>
+          </Box>
         )}
       </Group>
 
       {/* Featured Content Section */}
-      <Stack mt={rem(80)} gap="xl">
+      <Stack mt={isMobile ? rem(40) : rem(80)} gap="xl">
         <Title order={2} ta="center">
           {t("content.title")}
         </Title>
 
-        <Group gap="md" justify="center">
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="md">
           {[1, 2, 3].map((item) => (
             <Card
               key={item}
@@ -169,7 +192,7 @@ const Home = () => {
               padding="lg"
               radius="md"
               style={{
-                width: isMobile ? "100%" : rem(300),
+                width: "100%",
                 aspectRatio: "9/16",
               }}
             >
@@ -192,20 +215,20 @@ const Home = () => {
               </Group>
             </Card>
           ))}
-        </Group>
+        </SimpleGrid>
 
-        <Button variant="light" size="lg" mx="auto" mt="xl">
+        <Button variant="light" size={isMobile ? "md" : "lg"} mx="auto" mt="xl">
           {t("content.view_all")}
         </Button>
       </Stack>
 
       {/* About Section */}
-      <Stack mt={rem(80)} gap="md">
+      <Stack mt={isMobile ? rem(40) : rem(80)} gap="md">
         <Title order={2}>{t("about.title")}</Title>
-        <Text size="lg">{t("about.description")}</Text>
-        <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="xl" mt="xl">
+        <Text size={isMobile ? "md" : "lg"}>{t("about.description")}</Text>
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="md" mt="xl">
           {stats.map((stat, index) => (
-            <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+            <Card key={index} shadow="sm" padding="md" radius="md" withBorder>
               <Group>
                 {stat.icon && (
                   <Avatar color={theme.primaryColor} radius="xl">
@@ -213,10 +236,10 @@ const Home = () => {
                   </Avatar>
                 )}
                 <Stack gap={0}>
-                  <Text fw={700} size="xl">
+                  <Text fw={700} size={isSmallScreen ? "md" : "xl"}>
                     {stat.value}
                   </Text>
-                  <Text c="dimmed" size="sm">
+                  <Text c="dimmed" size={isSmallScreen ? "xs" : "sm"}>
                     {stat.label}
                   </Text>
                 </Stack>

@@ -15,12 +15,12 @@ import {
   Anchor,
   Divider,
   Box,
+  Image,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useTranslation } from "next-i18next";
 import { IconBrandInstagram, IconBrandSnapchat } from "@tabler/icons-react";
 
-// Define TypeScript interfaces for our data structures
 interface BioData {
   birthday: string;
   birth_sign: string;
@@ -59,7 +59,7 @@ function HowItsAllStarted() {
       {/* Hero Section */}
       <Stack gap="xl" mb={rem(60)} align="center">
         <Avatar
-          src="https://example.com/mix-profile.jpg" // Replace with actual image
+          src="/images/influencer/1.jpg"
           size={150}
           radius="50%"
           mb="md"
@@ -168,12 +168,20 @@ function HowItsAllStarted() {
         {t("associations")}
       </Text>
 
-      {/* Gallery Placeholder */}
       <Box
         my="xl"
-        style={{ height: 300, backgroundColor: theme.colors.gray[1] }}
+        style={{ height: 600, backgroundColor: theme.colors.gray[1] }}
       >
-        {/* This would be replaced with actual image gallery */}
+        <Image
+          src="/images/influencer/1.jpg"
+          width="100%"
+          height="100%"
+          alt="Test"
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
       </Box>
     </Container>
   );

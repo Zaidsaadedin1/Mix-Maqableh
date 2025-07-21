@@ -62,7 +62,7 @@ function WhosMix() {
 
   const slides: Slide[] = [
     {
-      image: "images/influencer/1.jpg",
+      image: "/images/influencer/1.jpg",
       headline: t("slide1.headline"),
       paragraph: t("slide1.paragraph"),
       description: t("slide1.description"),
@@ -73,7 +73,7 @@ function WhosMix() {
       animationDuration: 800,
     },
     {
-      image: "images/influencer/2.jpg",
+      image: "/images/influencer/2.jpg",
       headline: t("slide2.headline"),
       paragraph: t("slide2.paragraph"),
       description: t("slide2.description"),
@@ -84,7 +84,7 @@ function WhosMix() {
       animationDuration: 800,
     },
     {
-      image: "images/influencer/3.jpg",
+      image: "/images/influencer/3.jpg",
       headline: t("slide3.headline"),
       paragraph: t("slide3.paragraph"),
       description: t("slide3.description"),
@@ -95,7 +95,7 @@ function WhosMix() {
       animationDuration: 800,
     },
     {
-      image: "images/influencer/4.jpg",
+      image: "/images/influencer/4.jpg",
       headline: t("slide4.headline"),
       paragraph: t("slide4.paragraph"),
       description: t("slide4.description"),
@@ -106,7 +106,7 @@ function WhosMix() {
       animationDuration: 800,
     },
     {
-      image: "images/influencer/5.jpg",
+      image: "/images/influencer/5.jpg",
       headline: t("slide5.headline"),
       paragraph: t("slide5.paragraph"),
       description: t("slide5.description"),
@@ -117,7 +117,7 @@ function WhosMix() {
       animationDuration: 800,
     },
     {
-      image: "images/influencer/6.jpg",
+      image: "/images/influencer/6.jpg",
       headline: t("slide6.headline"),
       paragraph: t("slide6.paragraph"),
       description: t("slide6.description"),
@@ -128,7 +128,7 @@ function WhosMix() {
       animationDuration: 800,
     },
     {
-      image: "images/influencer/7.jpg",
+      image: "/images/influencer/7.jpg",
       headline: t("slide7.headline"),
       paragraph: t("slide7.paragraph"),
       description: t("slide7.description"),
@@ -179,6 +179,7 @@ function WhosMix() {
         overflowY: "scroll",
         scrollSnapType: "y mandatory",
         scrollBehavior: "smooth",
+        background: "linear-gradient(135deg, #6fc8fcff 35%, #ffffff 50%)",
       }}
     >
       {/* Slides Section */}
