@@ -22,6 +22,7 @@ import {
   IconBrandSnapchat,
 } from "@tabler/icons-react";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const Home = () => {
   const theme = useMantineTheme();
@@ -29,7 +30,7 @@ const Home = () => {
   const isSmallScreen = useMediaQuery("(max-width: 576px)");
   const { t, i18n } = useTranslation("home");
   const isRTL = i18n.language === "ar";
-
+  const router = useRouter();
   // Updated stats with 22M+ followers
   const stats = [
     {
@@ -86,6 +87,11 @@ const Home = () => {
               leftSection={<IconBrandInstagram size={20} />}
               color="pink"
               fullWidth={isMobile}
+              onClick={() =>
+                router.push(
+                  "https://www.instagram.com/mixmaqableh?utm_source=ig_web_button_share_sheet&igsh=aGt4MDJzOTUybjQ5"
+                )
+              }
             >
               {t("hero.instagram_button")}
             </Button>
@@ -94,6 +100,11 @@ const Home = () => {
               leftSection={<IconBrandTiktok size={20} />}
               color="black"
               fullWidth={isMobile}
+              onClick={() =>
+                router.push(
+                  "https://www.tiktok.com/@mix_151?is_from_webapp=1&sender_device=pc"
+                )
+              }
             >
               {t("hero.tiktok_button")}
             </Button>
@@ -103,6 +114,11 @@ const Home = () => {
               color="yellow"
               variant="outline"
               fullWidth={isMobile}
+              onClick={() =>
+                router.push(
+                  "https://www.snapchat.com/add/mixmaqableh20?sender_web_id=82498340-a456-472a-bffe-00ffbc161205&device_type=desktop&is_copy_url=true"
+                )
+              }
             >
               {t("hero.snapchat_button")}
             </Button>
@@ -217,7 +233,17 @@ const Home = () => {
           ))}
         </SimpleGrid>
 
-        <Button variant="light" size={isMobile ? "md" : "lg"} mx="auto" mt="xl">
+        <Button
+          onClick={() =>
+            router.push(
+              "https://www.tiktok.com/@mix_151?is_from_webapp=1&sender_device=pc"
+            )
+          }
+          variant="light"
+          size={isMobile ? "md" : "lg"}
+          mx="auto"
+          mt="xl"
+        >
           {t("content.view_all")}
         </Button>
       </Stack>
