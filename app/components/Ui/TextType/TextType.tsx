@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { ElementType, useEffect, useRef, useState, createElement } from "react";
 import { gsap } from "gsap";
 import "./TextType.css";
@@ -78,7 +78,7 @@ const TextType = ({
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     observer.observe(containerRef.current);
@@ -133,11 +133,11 @@ const TextType = ({
           timeout = setTimeout(
             () => {
               setDisplayedText(
-                (prev) => prev + processedText[currentCharIndex],
+                (prev) => prev + processedText[currentCharIndex]
               );
               setCurrentCharIndex((prev) => prev + 1);
             },
-            variableSpeed ? getRandomSpeed() : typingSpeed,
+            variableSpeed ? getRandomSpeed() : typingSpeed
           );
         } else if (textArray.length > 1) {
           timeout = setTimeout(() => {
@@ -191,11 +191,13 @@ const TextType = ({
     showCursor && (
       <span
         ref={cursorRef}
-        className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? "text-type__cursor--hidden" : ""}`}
+        className={`text-type__cursor ${cursorClassName} ${
+          shouldHideCursor ? "text-type__cursor--hidden" : ""
+        }`}
       >
         {cursorCharacter}
       </span>
-    ),
+    )
   );
 };
 
