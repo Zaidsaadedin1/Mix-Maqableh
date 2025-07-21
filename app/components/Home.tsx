@@ -82,7 +82,7 @@ const Home = () => {
             grow={isSmallScreen}
           >
             <Button
-              size={isMobile ? "md" : "lg"}
+              size={isMobile ? "xs" : "lg"}
               leftSection={<IconBrandInstagram size={20} />}
               color="pink"
               fullWidth={isMobile}
@@ -95,7 +95,7 @@ const Home = () => {
               {t("hero.instagram_button")}
             </Button>
             <Button
-              size={isMobile ? "md" : "lg"}
+              size={isMobile ? "xs" : "lg"}
               leftSection={<IconBrandTiktok size={20} />}
               color="black"
               fullWidth={isMobile}
@@ -108,7 +108,7 @@ const Home = () => {
               {t("hero.tiktok_button")}
             </Button>
             <Button
-              size={isMobile ? "md" : "lg"}
+              size={isMobile ? "xs" : "lg"}
               leftSection={<IconBrandSnapchat size={20} />}
               color="yellow"
               variant="outline"
